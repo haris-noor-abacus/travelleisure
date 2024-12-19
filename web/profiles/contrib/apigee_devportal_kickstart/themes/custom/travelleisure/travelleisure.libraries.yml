@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+      css/styles.css: {}
+      css/custom-style.css: {}
+      css/home.css: {}
+      css/blogs.css: {}
+      css/footer.css: {}
+      css/header.css: {}
+      css/product-details.css: {}
+      css/thirdpage.css: {}
+      css/pageZero.css: {}
+    
+  dependencies:
+   - core/jquery
+   - core/drupal
+   - core/drupalSettings
+
+  # Additional libraries can be defined here if needed.

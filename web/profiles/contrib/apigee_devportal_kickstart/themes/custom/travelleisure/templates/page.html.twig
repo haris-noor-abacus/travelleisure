@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ head_title|safe_join(' | ') }}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  {{ attach_library('travelleisure/global-styling') }} 
+
+  <!-- Print meta tags, links, and other head elements -->
+  {{ page.meta }}
+
+  <!-- CSS added via modules -->
+  {{ page.stylesheets }}
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  
+    <!-- Custom Header Section -->
+     
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo Section -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="{{ base_path ~ directory }}/images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <!-- Search Bar Section -->
+            <div class="search-bar d-flex align-items-center">
+                <input type="text" class="form-control search-input" placeholder="Find anything" aria-label="Search" />
+            </div>
+
+            <!-- Sign-In Button -->
+            <button class="btn btn-outline-light sign-in" type="button">Sign In</button>
+        </div>
+    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+      <!-- Logo -->
+      <!-- <a class="navbar-brand" href="{{ path('<front>') }}">
+          <img src="{{ base_path ~ directory }}/images/logo.png" alt="Logo" class="d-inline-block align-top" height="30">
+      </a> -->
+
+      <!-- Toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Main Menu Block (first) -->
+          <ul class="navbar-nav first">
+              {{ page.main_menu }}  <!-- Main menu block -->
+          </ul>
+
+          <!-- User Menu Block (second) -->
+          <ul class="navbar-nav ml-auto second">
+              <!-- <img class="search-icon" src="{{ base_path ~ directory }}/images/icon.svg" alt="Search"> -->
+              {{ page.user_menu }}  <!-- User menu block -->
+          </ul>
+      </div>
+      </div>
+  </nav>
+</header>
+
+  
+  
+
+  <!-- Main content section -->
+  
+   
+      {{ page.content }}
+    
+
+
+  <!-- Footer -->
+   <div class="footer-content py-4">
+    <div class="container">
+        <div class="row footer-links">
+            <div class="link-group col-12 col-sm-6 col-md-3 mb-4">
+                <h4>Quick Links</h4>
+                {{ page.footer_first }}
+            </div>
+            <div class="link-group col-12 col-sm-6 col-md-3 mb-4">
+                <h4>Resources</h4>
+                {{ page.footer_second }}
+            </div>
+            <div class="link-group col-12 col-sm-6 col-md-3 mb-4">
+                <h4>Legal Information</h4>
+                {{ page.footer_third }}
+            </div>
+
+        </div>
+    </div>
+    <footer class="bottom-footer">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <p class="mb-0">© 2024 Travel and Leisure, Inc. All rights reserved</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <img src="{{ base_path ~ directory }}/images/logo.png" 
+                         alt="Travel and Leisure Logo" 
+                         class="footer-logo">
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="social-icons">
+                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+
+    
+
+
+  
+  
+
+  <!-- JS attached by the theme and other libraries -->
+  {{ attach_library('travelLeisure/global-scripts') }}
+
+  <!-- JavaScript added via modules -->
+  {{ page.scripts }}
+
+  <!-- Bootstrap JS -->
+  
+
+</body>
+
+</html>

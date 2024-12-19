@@ -1,0 +1,47 @@
+{
+    "project_info": {
+        "name": "dummy-apigee-kickstart",
+        "version": "1.0.0",
+        "description": "A small dummy Apigee Kickstart configuration",
+        "authors": [
+            "Your Name"
+        ]
+    },
+    "environments": [
+        {
+            "name": "test",
+            "base_path": "/dummy-api",
+            "host": "test-api.example.com",
+            "api_proxies": [
+                {
+                    "name": "dummy-proxy",
+                    "base_path": "/v1/dummy",
+                    "targets": [
+                        {
+                            "name": "dummy-target",
+                            "url": "https://dummy-service.example.com/v1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "shared_flows": [
+        {
+            "name": "error-handler",
+            "description": "Handles generic API errors."
+        }
+    ],
+    "policies": [
+        {
+            "name": "default-quota",
+            "type": "Quota",
+            "description": "Default quota policy",
+            "settings": {
+                "time_unit": "minute",
+                "allow": 100,
+                "interval": 1
+            }
+        }
+    ]
+}

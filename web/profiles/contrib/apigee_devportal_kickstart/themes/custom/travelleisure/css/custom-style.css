@@ -1,0 +1,33 @@
+.text-orange{
+    color: #d64310 !important;
+}
+ 
+ 
+ 
+ 
+.mat-toolbar .mat-primary {
+  background: var(--Brand-Blue-400, rgba(17, 48, 156, 1)) !important;
+ 
+  color: #ffffff;
+}
+ 
+ 
+.context-bar{
+  background: var(--Brand-Blue-400, rgba(17, 48, 156, 1)) !important;
+ 
+  color: #ffffff;
+}
+ 
+ 
+ 
+.mat-raised-button {
+  color: rgba(17, 48, 156, 1) !important;
+  background-color: #fff;
+  margin: 100px !important;
+}
+ 
+.navbar-brand img{
+  max-height: 50px !important;
+}
+ 
+ 

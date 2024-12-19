@@ -1,0 +1,98 @@
+/* Banner Section */
+.banner-section {
+    background-image: url('/travelleisure/web/profiles/contrib/apigee_devportal_kickstart/themes/custom/travelleisure/images/third-page-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 80vh;
+}
+
+.banner-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Features Section */
+.features-section {
+    position: relative;
+    margin-top: -100px;
+    padding-bottom: 50px;
+    z-index: 10;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 50%;
+}
+
+/* Typography */
+.display-2 {
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.4rem;
+}
+
+/* Product Spotlight Section */
+.product-spotlight {
+    margin-top: -50px;
+    position: relative;
+    z-index: 5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .display-2 {
+        font-size: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.2rem;
+    }
+
+    .features-section {
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-2 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    .banner-section {
+        height: 70vh;
+    }
+
+    .features-section {
+        margin-top: -30px;
+    }
+}

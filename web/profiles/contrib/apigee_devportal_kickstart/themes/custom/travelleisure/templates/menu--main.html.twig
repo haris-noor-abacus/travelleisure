@@ -1,0 +1,20 @@
+<ul class="navbar-nav first">
+  {% for item in items %}
+    <li class="nav-item {% if item.is_expanded %}dropdown{% endif %} {{ item.is_active ? 'active' : '' }}">
+      <a href="{{ item.url }}" class="nav-link {% if item.below %}dropdown-toggle{% endif %}" {% if item.below %}data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>
+        {{ item.title }}
+      </a>
+
+      {# Check if there are submenus (child items) #}
+      {% if item.below %}
+        <ul class="dropdown-menu">
+          {% for subitem in item.below %}
+            <li class="dropdown-item">
+              <a href="{{ subitem.url }}">{{ subitem.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

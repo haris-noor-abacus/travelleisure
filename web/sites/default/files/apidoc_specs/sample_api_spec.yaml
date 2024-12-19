@@ -1,0 +1,70 @@
+
+openapi: 3.0.1
+info:
+  title: Sample API
+  description: A simple API to demonstrate Apigee documentation.
+  version: 1.0.0
+  contact:
+    name: API Support
+    url: https://www.example.com/support
+    email: support@example.com
+servers:
+  - url: https://api.example.com/v1
+    description: Main API Server
+paths:
+  /greet:
+    get:
+      summary: Returns a greeting message.
+      description: This endpoint returns a "Hello, World!" message.
+      operationId: greetUser
+      tags:
+        - Greetings
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello, World!"
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Bad Request"
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+components:
+  schemas:
+    GreetingMessage:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Hello, World!"
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Greetings
+    description: Operations related to greetings

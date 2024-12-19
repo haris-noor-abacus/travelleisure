@@ -1,0 +1,60 @@
+{#
+  /**
+   * @file
+   * Default theme implementation to display an Apigee Edge API Doc.
+   *
+   * Available variables:
+   * - entity: The Apigee Edge API Doc entity.
+   * - content: All items. Use {{ content }} to print them all.
+   * - attributes: HTML attributes for the containing element.
+   *
+   * @ingroup themeable
+   */
+  #}
+  {% extends 'apigee-entity.html.twig' %}
+  
+  {% block content %}
+  
+    <div class="api-doc-card">
+      <!-- Card Wrapper -->
+      <div class="card h-100">
+        <div class="card-body">
+          
+          <!-- Image Rendering -->
+          {% set image = content.field_image ?? content.field_image_apidoc %}
+          {% if image %}
+            <div class="api-doc-image">
+              {{ image | render({'attributes': { 'style': 'width: 25px; height: 25px;' }}) }}
+              <!-- Ensure image is rendered properly -->
+            </div>
+          {% endif %}
+  
+          <!-- Title -->
+          <h3 class="card-title">{{ entity.label }}</h3>
+  
+          <!-- Description / API Spec -->
+         
+          <!-- {% set image = content.field_image ?? content.field_image_apidoc %} -->
+          {% if content.body['#items'][0].value %}
+            <div class="card-text">
+              <p>{{ content.body['#items'][0].value | striptags}}</p>  <!-- Render description -->
+            </div>
+          {% else %}
+            <div class="api-doc-spec">
+              <p>No description available for this API.</p>
+            </div>
+          {% endif %}
+  
+          <!-- Documentation Link -->
+          {% if content.field_apidoc_file_link %}
+            <a href="{{ content.field_apidoc_file_link['#url'] }}" class="btn btn-link text-decoration-none pl-0">
+              Explore Documentation <i class="bi bi-arrow-right"></i>
+            </a>
+          {% endif %}
+  
+        </div>
+      </div>
+    </div>
+  
+  {% endblock %}
+  

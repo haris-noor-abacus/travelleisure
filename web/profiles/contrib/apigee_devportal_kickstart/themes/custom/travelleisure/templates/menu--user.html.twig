@@ -1,0 +1,8 @@
+<ul class="navbar-nav ml-auto second">
+  <img class="search-icon" src="{{ base_path ~ directory }}/images/searchIcon.svg" alt="Search">
+  {% for item in items %}
+    <li class="nav-item">
+      <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
