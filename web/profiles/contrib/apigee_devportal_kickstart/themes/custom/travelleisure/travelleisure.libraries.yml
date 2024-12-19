@@ -1,10 +1,11 @@
 global-styling:
   css:
     theme:
-      css/styles.css: {}
+      css/style.css: {}
       css/custom-style.css: {}
       css/home.css: {}
       css/blogs.css: {}
+      css/faqs.css: {}
       css/footer.css: {}
       css/header.css: {}
       css/product-details.css: {}
