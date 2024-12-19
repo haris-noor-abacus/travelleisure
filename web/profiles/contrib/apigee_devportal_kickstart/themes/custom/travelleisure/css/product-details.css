@@ -237,91 +237,166 @@ text-decoration-skip-ink: none;
 
 
 /* General form styling */
+/* Adjust the container to display elements in one row */
+
+
 .views-exposed-form {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
+    justify-content: space-evenly;
+    gap: 10px; /* Reduce space between items */
     padding: 10px 0;
-    background-color: #f8fafc; /* Light background color */
+    padding-top: 25px;
+    background-color: #f8fafc;
   }
   
+  /* Search input */
   .form-item-title input {
-    width: 250px;
+    width: 350px; /* Fix width for consistency */
     padding: 8px 12px;
-    border: 1px solid #d1d5db; /* Light gray border */
+    border: 1px solid #d1d5db;
     border-radius: 5px;
     font-size: 14px;
   }
   
-  .form-item-title input::placeholder {
-    color: #9ca3af; /* Placeholder color */
-  }
-  
+  /* Remove unnecessary styles for label positioning */
   .form-item-title {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    margin-right: 20px;
   }
   
-  .form-item-title::after {
-    content: "\f002"; /* Search icon (FontAwesome) */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #6b7280;
-    font-size: 16px;
-    margin-left: -30px;
-    pointer-events: none;
-  }
-  
-  /* Category Filter dropdown */
-  .form-item-delta {
-    margin: 0;
-  }
-  
+  /* Style for Category Filter dropdown */
   .form-item-delta select {
-    padding: 8px 12px;
+    padding: 6px 8px;
     border: 1px solid #d1d5db;
     border-radius: 5px;
     font-size: 14px;
     color: #374151;
     cursor: pointer;
+    width: 250px; /* Ensure consistent width */
   }
   
-  /* Clear Filter Button */
-  #edit-actions input {
-    display: none; /* Hide submit button */
-  }
+  /* Adjust Clear Filter button to align properly */
+/* Target the 'Clear all filters' button using the class and ID for better specificity */
+#edit-reset-apigee-api-catalog--THuP5CArRDU, 
+#edit-reset-apigee-api-catalog--THuP5CArRDU.btn-link {
+  background-color: #e5e7eb !important; /* Gray background */
+  color: #111827 !important;  /* Text color */
+  padding: 8px 12px !important;
+  border: none !important;
+  border-radius: 5px !important;
+  font-size: 14px !important;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Insert FontAwesome 'X' icon before text */
+#edit-reset-apigee-api-catalog--THuP5CArRDU::before {
+  content: "\f00d"; /* FontAwesome 'X' icon */
+  font-weight: 900;
+  color: #6b7280;
+  margin-right: 5px; /* Space between the icon and text */
+}
+
+/* Hover effect for the 'Clear all filters' button */
+#edit-reset-apigee-api-catalog--THuP5CArRDU:hover {
+  background-color: #d1d5db;
+}
+
   
-  .clear-filter {
-    background-color: #e5e7eb; /* Gray background */
-    color: #111827; /* Text color */
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: 500;
-    display: inline-flex;
+  /* Ensure proper alignment of the search button */
+  #edit-actions {
+    display: flex;
     align-items: center;
-    gap: 5px;
-  }
-  
-  .clear-filter::before {
-    content: "\f00d"; /* FontAwesome 'X' icon */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #6b7280;
-  }
-  
-  .clear-filter:hover {
-    background-color: #d1d5db;
+    gap: 10px;
   }
 
-
+  
+  
   .view-apigee-api-catalog .container-fluid{
     padding-left: 0 !important;
     padding-right: 0 !important;
 
   }
+
+
+  .views-exposed-form .js-form-type-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  } 
+
+  .views-exposed-form .form-label{
+    padding-top: 10px;
+  }
+
+
+  @media (max-width: 768px) {
+    .views-exposed-form {
+      flex-direction: column; /* Stack form elements vertically */
+      align-items: stretch; /* Ensure items take full width */
+      padding-top: 15px;
+    }
   
+    .form-item-title input {
+      width: 90% !important; /* Make the search input take full width on mobile */
+      margin-bottom: 10px; /* Add margin between the input and next element */
+      margin: 0 auto;
+    }
+  
+    .form-item-delta select {
+      width: 85% !important; /* Make the dropdown take full width on mobile */
+      margin-bottom: 10px; /* Add margin between dropdown and other elements */
+      margin: 0 auto;
+    }
+  
+    #edit-reset-apigee-api-catalog--THuP5CArRDU {
+      width: 100%; /* Make 'Clear all filters' button take full width */
+      margin-bottom: 10px; /* Add margin between the button and next element */
+    }
+  
+    #edit-actions {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: stretch; /* Make buttons take full width */
+    }
+  
+    .form-label {
+      padding-top: 0; /* Remove padding on smaller screens */
+    }
+
+
+    .views-exposed-form .js-form-type-select {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+      } 
+  }
+  
+  /* Mobile Responsiveness: For smaller devices like phones */
+  @media (max-width: 480px) {
+    .views-exposed-form {
+      padding-top: 10px; /* Adjust padding on very small screens */
+    }
+  
+    .form-item-title input {
+      width: 100%; /* Full width for input on very small screens */
+    }
+  
+    .form-item-delta select {
+      width: 100%; /* Full width for dropdown on very small screens */
+    }
+  
+    #edit-reset-apigee-api-catalog--THuP5CArRDU {
+      width: 100%; /* Full width for clear filter button on small screens */
+    }
+  
+    #edit-actions {
+      width: 100%; /* Ensure search button is full width */
+    }
+  }
