@@ -18,5 +18,8 @@
     "stylelint-order": "^0.6.0",
     "stylelint-scss": "^2.1.0",
     "stylelint-selector-bem-pattern": "^1.0.0"
+  },
+  "dependencies": {
+    "paragraphs": "file:"
   }
 }

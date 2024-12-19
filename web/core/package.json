@@ -122,5 +122,8 @@
     "last 1 Samsung version",
     "Firefox ESR"
   ],
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "yarn@1.22.22",
+  "dependencies": {
+    "Drupal": "file:"
+  }
 }
