@@ -24,7 +24,7 @@
           {% set image = content.field_image ?? content.field_image_apidoc %}
           {% if image %}
             <div class="api-doc-image">
-              {{ image | render({'attributes': { 'style': 'width: 25px; height: 25px;' }}) }}
+              {{ image | render({'attributes': { 'style': 'width: 40px; height: 40px;' }}) }}
               <!-- Ensure image is rendered properly -->
             </div>
           {% endif %}
@@ -48,7 +48,7 @@
           <!-- Documentation Link -->
           {% if content.field_apidoc_file_link %}
             <a href="{{ content.field_apidoc_file_link['#url'] }}" class="btn btn-link text-decoration-none pl-0">
-              Explore Documentation <i class="bi bi-arrow-right"></i>
+             → Explore Documentation <i class="bi bi-arrow-right"></i>
             </a>
           {% endif %}
   

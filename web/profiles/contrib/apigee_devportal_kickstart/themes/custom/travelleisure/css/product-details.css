@@ -243,7 +243,7 @@ text-decoration-skip-ink: none;
 .views-exposed-form {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 10px; /* Reduce space between items */
     padding: 10px 0;
     padding-top: 25px;
@@ -280,28 +280,9 @@ text-decoration-skip-ink: none;
   
   /* Adjust Clear Filter button to align properly */
 /* Target the 'Clear all filters' button using the class and ID for better specificity */
-#edit-reset-apigee-api-catalog--THuP5CArRDU, 
-#edit-reset-apigee-api-catalog--THuP5CArRDU.btn-link {
-  background-color: #e5e7eb !important; /* Gray background */
-  color: #111827 !important;  /* Text color */
-  padding: 8px 12px !important;
-  border: none !important;
-  border-radius: 5px !important;
-  font-size: 14px !important;
-  cursor: pointer;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
 
 /* Insert FontAwesome 'X' icon before text */
-#edit-reset-apigee-api-catalog--THuP5CArRDU::before {
-  content: "\f00d"; /* FontAwesome 'X' icon */
-  font-weight: 900;
-  color: #6b7280;
-  margin-right: 5px; /* Space between the icon and text */
-}
+
 
 /* Hover effect for the 'Clear all filters' button */
 #edit-reset-apigee-api-catalog--THuP5CArRDU:hover {
@@ -311,11 +292,86 @@ text-decoration-skip-ink: none;
   
   /* Ensure proper alignment of the search button */
   #edit-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    background-color: #e5e7eb !important; /* Gray background */
+    color: #111827 !important;  /* Text color */
+    width: 160px;
+    height: 40px;
+    /* padding: 0px 16px 0px 16px; */
+    gap: 13px;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 0px;
+    border-top:none !important ;
+    
   }
 
+  
+  .views-exposed-form .form-actions input.btn-reset{
+    padding-left: 50px !important;
+    color: black !important;
+  }
+
+/* 
+  .api .view-content {
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.api .api-card {
+  display: flex;
+    flex: 0 0 32.25%;
+    box-sizing: border-box;
+    padding: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #DCDFE2;
+    border-radius: 2px;
+    height: 282px;
+    width: 362px;
+}
+
+.api-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.011em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000 !important;
+
+}
+
+.api-card-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.011em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-top: 10px;
+    height: 85px;
+}
+
+.api-card-explore-btn a {
+    color: #d64310 !important;
+    text-decoration: none !important;
+} */
+
+.api-doc-card .card-text {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  letter-spacing: -0.011em;
+  text-align: left !important;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: 10px;
+  height: 75px;
+}
   
   
   .view-apigee-api-catalog .container-fluid{
