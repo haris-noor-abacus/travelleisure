@@ -892,16 +892,41 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+// $databases['default']['default'] = array (
+//   'database' => 'travelleisuredb',
+//   'username' => 'root',
+//   'password' => '',
+//   'prefix' => '',
+//   'host' => 'localhost',
+//   'port' => '3306',
+//   'isolation_level' => 'READ COMMITTED',
+//   'driver' => 'mysql',
+//   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+//   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
+// );
+// $settings['config_sync_directory'] = 'sites/default/files/config_D6SE9TYdrGu9F95q7u3eOJiMk3d721PyyOQt3MEX7XmfFVUMdFZKyaK51A11VnGG_Ga7uLssug/sync';
 $databases['default']['default'] = array (
+ 
   'database' => 'travelleisuredb',
+ 
   'username' => 'root',
+ 
   'password' => '',
+ 
   'prefix' => '',
-  'host' => 'localhost',
+ 
+  'host' => '10.1.122.68', // Replace 'localhost' with the host's IP address
+ 
   'port' => '3306',
+ 
   'isolation_level' => 'READ COMMITTED',
+ 
   'driver' => 'mysql',
+ 
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
+ 
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+ 
 );
+ 
 $settings['config_sync_directory'] = 'sites/default/files/config_D6SE9TYdrGu9F95q7u3eOJiMk3d721PyyOQt3MEX7XmfFVUMdFZKyaK51A11VnGG_Ga7uLssug/sync';
